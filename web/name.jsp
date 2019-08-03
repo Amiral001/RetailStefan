@@ -14,8 +14,11 @@
 <form method="POST" action="hello">
 
     Name:<input type="text" name="name"><br>
+
     Password:<input type="password" name="pass">
+
     <button type="submit">Login</button>
+
     <input type="checkbox" checked="checked" name="remember"> Remember me
 
 </form>
