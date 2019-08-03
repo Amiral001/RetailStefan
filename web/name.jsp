@@ -12,8 +12,12 @@
 </head>
 <body>
 <form method="POST" action="hello">
-    Name: <input type="text" name="name"> <br> <br>
-    <input type="submit" value="submit">
+
+    Name:<input type="text" name="name"><br>
+    Password:<input type="password" name="pass">
+    <button type="submit">Login</button>
+    <input type="checkbox" checked="checked" name="remember"> Remember me
+
 </form>
 </body>
 </html>

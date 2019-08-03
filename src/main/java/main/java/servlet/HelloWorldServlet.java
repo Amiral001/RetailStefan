@@ -44,4 +44,5 @@ public class HelloWorldServlet extends HttpServlet {
         request.setAttribute("name", name);
         request.getRequestDispatcher("/result.jsp").forward(request, response);
     }
+
 }
