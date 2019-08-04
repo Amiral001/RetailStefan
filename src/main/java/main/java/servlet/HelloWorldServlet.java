@@ -14,14 +14,9 @@ import java.util.Date;
 public class HelloWorldServlet extends HttpServlet {
 
     private String name;
+    private String password;
+    private String mesaj;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -40,9 +35,38 @@ public class HelloWorldServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String name = request.getParameter("name");
+        String password = request.getParameter("password");
         this.name = name;
+        this.password = password;
+
         request.setAttribute("name", name);
+
+        if ("abc123".equals(password)) {
+            mesaj = "M-am logat cu succes!";
+        } else {
+            mesaj = "Sorry, username or password error!";
+        }
+        request.setAttribute("mesaj", mesaj);
         request.getRequestDispatcher("/result.jsp").forward(request, response);
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
 }
+
+
