@@ -63,4 +63,11 @@ public class ValidareLogin {
         commitTransactionAndCloseSession();
         return message;
     }
+
+    public void insertUser (Users users){
+        getSessionAndTransaction();
+        session.save(users);
+        commitTransactionAndCloseSession();
+    }
+
 }

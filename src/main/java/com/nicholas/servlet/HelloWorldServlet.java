@@ -12,7 +12,7 @@ import java.io.PrintWriter;
 import java.util.Date;
 
 
-@WebServlet(name = "HelloServlet", urlPatterns = "/hello")
+@WebServlet(name = "HelloServlet", urlPatterns = "/login")
 public class HelloWorldServlet extends HttpServlet {
 
     private String name;
